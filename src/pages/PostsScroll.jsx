@@ -39,6 +39,7 @@ function PostsScroll() {
 
   useEffect(() => {
     fetchPosts(limit, page)
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page, limit])
 
   const createPost = (newPost) => {
