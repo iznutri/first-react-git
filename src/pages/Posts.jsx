@@ -18,7 +18,7 @@ function Posts() {
   const [filter, setFilter] = useState({ sort: '', query: '' })
   const [modal, setModal] = useState(false)
   const [totalPages, setTotalPages] = useState(0)
-  const [limit, setLimit] = useState(10)
+  const [limit] = useState(10)
   const [page, setPage] = useState(1)
   const sortedAndSearchedPosts = usePosts(posts, filter.sort, filter.query)
 
@@ -33,6 +33,7 @@ function Posts() {
 
   useEffect(() => {
     fetchPosts(limit, page)
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const createPost = (newPost) => {
