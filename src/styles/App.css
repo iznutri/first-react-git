@@ -20,10 +20,11 @@
 .post {
   display: flex;
   padding: 15px;
-  border: 2px solid teal;
+  border: 2px solid #bcff57;
   margin-top: 15px;
   justify-content: space-between;
   align-items: center;
+  color: #5e5e5e;
 }
 
 .post-enter {
